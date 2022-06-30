@@ -1,4 +1,4 @@
-package com.example.films.moviedetails
+package com.example.films.view
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

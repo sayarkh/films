@@ -1,19 +1,12 @@
-package com.example.films.moviedetails
-
+package com.example.films.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.films.R
-import com.example.films.RecyclerViewItemClickListener
 import com.example.films.databinding.ActivityMainBinding
-import com.example.films.models.Movie
-import com.example.films.moviedetails.ui.favorites.FavoritesFragment
-import com.example.films.moviedetails.ui.movie.MainFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import dagger.hilt.android.AndroidEntryPoint
 

@@ -1,6 +1,6 @@
 package com.example.films
 
-import com.example.films.models.Movie
+import com.example.films.model.Movie
 
 interface RecyclerViewItemClickListener {
     fun onClickListener(movie: Movie, pos: Int)

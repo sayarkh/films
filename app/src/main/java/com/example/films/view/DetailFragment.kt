@@ -1,4 +1,4 @@
-package com.example.films.moviedetails.ui.details
+package com.example.films.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,16 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.example.films.IMAGE_BASE
-import com.example.films.R
-import com.example.films.data.MovieApiInterface
-import com.example.films.data.MovieApiService
-import com.example.films.models.MovieDetails
-import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_detail.*
-import kotlinx.android.synthetic.main.fragment_main.*
+import com.example.films.model.MovieApiService
+import com.example.films.model.MovieDetails
 import retrofit2.Call
 import com.example.films.databinding.FragmentDetailBinding
-import kotlinx.android.synthetic.main.card_layout.view.*
 import retrofit2.Callback
 import retrofit2.Response
 
@@ -54,10 +48,6 @@ class DetailFragment : Fragment() {
             override fun onFailure(call: Call<MovieDetails>, t: Throwable) {
 
             }
-
-        }
-
-        )
+        })
     }
-
 }
