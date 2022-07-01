@@ -31,14 +31,11 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         rv_movies_list.setHasFixedSize(true)
-//        getMovieData {  movies: List<Movie> ->
-//            rv_movies_list.adapter = MainAdapter(movies, listener)
-//        }
         init()
     }
 
     fun init() {
-        val viewModel = ViewModelProvider(this, defaultViewModelProviderFactory).get(MainFragmentViewModel::class.java)
+        val viewModel = ViewModelProvider(this).get(MainFragmentViewModel::class.java)
         viewModel.getMovies().observe(this, Observer<MovieResponse> {
             if(it != null){
                 rv_movies_list.adapter = MainAdapter(it.movies, listener)
